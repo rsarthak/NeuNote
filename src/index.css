@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFF0E5;
+  background-image: radial-gradient(#10162F 1px, transparent 0);
+  background-size: 40px 40px;
+  overflow-y: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
+  padding-left: 40px;
+}
+
+
+
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgb(233,233,233);
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 30px;
+  border-radius: 10px;
+  border: solid;
+  border-width: 1px;
+  box-shadow: 0px 0px 0 #10162F;
+}
+.searchBar{ 
+  background-color: rgb(233,233,233);
+  width: 200px;
+  border: none;
+}
+.searchBar:focus{
+  outline: none;
+}
+
+.notesList{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  height: 80vh;
+}
+
+.note.new{
+  background-color: #67d7cc;
+}
+
+textarea{
+  border: none;
+  resize: none;
+  background-color: #67d7cc;
+  font-family: 'Rubik', sans-serif;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.title{
+  margin-bottom: 2px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.save{
+  background-color: #e1e1e1;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  user-select: none;
+  box-shadow: 0px 0px 0 #10162F;
+  
+}
+
+.save:hover{
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.note{
+  
+    color: black;
+    border: 1px solid black;
+    border-color: #10162F;
+    padding: 1rem;
+    display: flex;
+    height: 15rem;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: 0px 0px 0 #10162F;
+    white-space: pre-wrap;
+    justify-content: space-between;
+    transition: box-shadow 200ms ease,transform 200ms ease;
+}
+
+.note:hover{
+  
+  transform: translate(4px, -4px);
+  box-shadow: -8px 8px 0 #10162f ;
+}
+.notetitle{
+  color: #10162f;
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 24px;
+  word-wrap: break-word;
+}
+.description{
+  height: 150px;
+  margin-top: 12px;
+}
+
+.noteArea{
+  width : 1700px;
+  height: 80vh;
+}
+
+.notes-footer{
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+hr{
+  display: block;
+  border-style: inset;
+  border-width: 1px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.description{
+  word-wrap: break-word;
+}
+.delete-icon:hover{
+  background-color: #67d7cc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  
+}
+
+.pageItem{
+  color: white;
+  background-color: #FFD300;
+  border: 1px solid black;
+  border-color: #10162F;
+  margin-left: 5px;
+  margin-bottom: 4px;
+  padding: 9px;
+
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.pageLink{
+  color: white;
+  text-decoration: none;
+}
+
+
+.sideBar{
+  width: 600px;
+  height: fit-content;
+  margin-left: 20px;
+  margin-right: -320px;
+  margin-top: 80px;
+}
+
+.sidebar-heading{
+  margin-top: 0;
+  user-select: none;
+}
+
+.card{
+  color: black;
+  border: 1px solid black;
+  border-color: #10162F;
+  padding: 1rem;
+  display: flex;
+  min-height: 3rem;
+  margin-bottom: 6px;
+  background-color: rgb(202, 178, 255);
+  flex-direction: column;
+  box-shadow: 0px 0px 0 #10162F;
+  white-space: pre-wrap;
+  justify-content: space-between;
+  transition: box-shadow 200ms ease,transform 200ms ease;
+}
+
+.pinHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tagline{
+  margin-top: -10px;
+}
+
+.pinIcon{
+  height: 20px;
+  width: 20px;
+  margin-bottom: 13px;
+  background-color: #EA564B;
+  color: white;
+  padding: 3px;
+  border: 1px solid black;
+  border-color: #10162F;
+  z-index: 10;
+}
+
+.pinIcon:hover{
+  cursor: pointer;
+  background-color: #67d7cc;
+}
+
+.pinnedIcon{
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  border-color: #10162F;
+}
+
+.pinnedIcon:hover{
+  cursor: pointer;
+  background-color: #67d7cc;
+}
+.pintitle{
+  font-weight:600;
+}
+
+h4{
+  font-weight: 500;
+  background-color: #67d7cc;
+  user-select: none;
+}
+
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 15;
+  
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  line-height: 1.4;
+  padding: 14px 28px;
+  border-radius: 3px;
+  min-width: 600px;
+  min-height: 600px;
+  z-index: 20;
+}
+
+.close-modal {
+  position: absolute;
+  top: 14px;
+  right: -16px;
+  padding: 3px 3px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeIcon{
+  width: 30px;
+  height: 30px;
+}
+
+.popup{
+  color: black;
+  border: 1px solid black;
+  border-color: #10162F;
+  padding: 20px;
+  display: flex;
+  font-size: 45px;
+  height: 400px;
+  margin-bottom: 6px;
+  background-color: #67d7cc;
+  flex-direction: column;
+  box-shadow: 0px 0px 0 #10162F;
+  white-space: pre-wrap;
+  justify-content: space-between;
+  transition: box-shadow 200ms ease,transform 200ms ease;
+}
+
+textarea.title{
+  font-size: 24px;
+  margin-bottom: 12px;
+
+}
+
+.editDescription{
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.line{
+  margin-top: -20px;
+  border-width: 2px;
+  border-color: #10162F;
+}
+
+.limit{
+  font-size: 14px;
+}                                              
+
+.toast{
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  transition-duration: 3ms;
+  border-color: #10162F;
+  border-width: 2px;
+  width: 300px;
+  height: 40px;
+  background-color:#67d7cc;
+  position: absolute;
+  top: 600px;
+  left:650px;
+  z-index: 30;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
