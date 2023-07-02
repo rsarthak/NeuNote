@@ -57,26 +57,21 @@ export default function App(){
 
   const paginate =(pageNumber)=> setCurrentpage(pageNumber)
 
-  React.useEffect(() => {
-
-    console.log(notes,pinnedNotesCount)
-    localStorage.setItem('react-notes-app-data',JSON.stringify({notes,pinnedNotesCount}))
-    
-  }, [notes,pinnedNotesCount])
-
- React.useEffect(() => {
-
-    if(localStorage.getItem('react-notes-app-data') != null){
-      const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'))
-      if(savedNotes[0]){
-        setNotes(savedNotes[0]);
-      }
-      if(savedNotes[1]){
-        setPinnedNotesCount(savedNotes[1]);
-      }
+  useEffect(() => {
+    const storedData = localStorage.getItem('react-notes-app-data');
+    if (storedData) {
+      const { notes, pinnedNotesCount } = JSON.parse(storedData);
+      setNotes(notes);
+      setPinnedNotesCount(pinnedNotesCount);
     }
-    
-  }, [])
+  }, []);
+
+  // Update local storage whenever notes or pinnedNotesCount change
+React.useEffect(() => {
+    const data = JSON.stringify({ notes, pinnedNotesCount });
+    localStorage.setItem('react-notes-app-data', data);
+  }, [notes, pinnedNotesCount]);
+ 
   
 
 
