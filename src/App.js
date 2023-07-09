@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect} from 'react'
 import {nanoid} from 'nanoid'
 import NotesList from './components/notesList'
 import Header from './components/header';
